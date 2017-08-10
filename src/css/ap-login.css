@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 11, 2017, 12:08:24 AM
+    Author     : nagaraju_yasarapu
+*/
+
+.login-page .branding {
+    margin-top: 100px;
+}
+
+.login-page .branding-text {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.login-page .error-message-text {
+    color: red; 
+    font-size: larger;
+    margin-bottom: 5px;
+}

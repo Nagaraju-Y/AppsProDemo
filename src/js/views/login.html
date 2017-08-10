@@ -1,0 +1,48 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="oj-hybrid-applayout-page">
+    <div class="oj-applayout-content">
+        <div role="main" class="oj-hybrid-applayout-content">
+            <div class="oj-hybrid-padding">
+                <div class="oj-flex">
+                    <div class="branding oj-margin-lg-start oj-sm-12 oj-flex-item">
+                        <div class="oj-sm-justify-content-flex-end oj-flex">
+                            <span class="branding-text oj-sm-12 oj-flex-item" data-bind="text: companyBrand"></span>
+                            <span class="branding-text oj-sm-12 oj-flex-item" data-bind="text: companyDesc"></span>
+                        </div>
+                    </div>
+                    <div class="login-form oj-sm-12 oj-flex-item">
+                        <div class="oj-sm-justify-content-center oj-flex" data-bind="visible: loginFailureText() !== ''">
+                            <span class="error-message-text text-align-center" data-bind="text: loginFailureText"></span> 
+                        </div>
+                        <input id="userName" type="text" data-bind="ojComponent: {
+                                                        component: 'ojInputText',
+                                                        placeholder: 'your.name@yourdomain.com',
+                                                        value: userName,
+                                                        invalidComponentTracker: tracker,
+                                                        required: true,
+                                                        rootAttributes: {style:'max-width:100%'} ,
+                                                        translations: {'required': {
+                                                            messageDetail: 'Please enter a valid user name'}}
+                        }" />
+                        <input id="password" type="password" data-bind="ojComponent: {
+                                                        component: 'ojInputPassword',
+                                                        placeholder: 'Password',
+                                                        value: password,
+                                                        invalidComponentTracker: tracker,
+                                                        required: true,
+                                                        rootAttributes: {style:'max-width:100%'} ,
+                                                        translations: {'required': {
+                                                            messageDetail: 'Please enter a valid password'}}
+                        }" />
+                        <div class="oj-margin-top oj-flex">
+                            <button data-bind="click: onLogin, text: 'Sign In'"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
