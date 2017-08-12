@@ -5,17 +5,20 @@
 /*
  * Your camera ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'ojs/ojbutton'],
-    function (oj, ko, $, app) {
+define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'util/commonhelper', 'util/imageSavingUtil', 'ojs/ojbutton'],
+    function (oj, ko, $, app, commonUtil, imgUtil) {
 
         function CameraViewModel(params) {
             var self = this;
 
             // Header Config
             self.headerConfig = {'viewName': 'header', 'viewModelFactory': app.getHeaderModel()};
-            
-            self.capturePhoto = function() {
-                console.log("Have to capture photo");
+
+            self.capturePhoto = function () {
+                navigator.camera.getPicture(imgUtil.onCaptureSuccess, imgUtil.onCaptureFail, {
+                    quality: 50,
+                    destinationType: Camera.DestinationType.FILE_URI
+                });
             };
         }
 
