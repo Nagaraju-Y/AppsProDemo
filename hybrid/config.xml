@@ -90,5 +90,6 @@
     <hook src="scripts/hooks/jetAfterPrepare.js" type="after_prepare" />
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
+    <plugin name="cordova-plugin-camera" spec="^2.4.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
 </widget>

@@ -9,13 +9,10 @@ and open the template in the editor.
 */
 
 .login-page .branding {
-    margin-top: 100px;
-}
-
-.login-page .branding-text {
     color: #000000;
     font-size: 32px;
     font-weight: 500;
+    margin-top: 80px;
 }
 
 .login-page .error-message-text {

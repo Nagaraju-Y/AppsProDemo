@@ -4,22 +4,18 @@
 -->
 <div class="oj-hybrid-applayout-page">
     <div class="oj-applayout-content">
-        <div role="main" class="oj-hybrid-applayout-content">
+        <div role="main" class="oj-hybrid-applayout-content login-page">
             <div class="oj-hybrid-padding">
                 <div class="oj-flex">
-                    <div class="branding oj-margin-lg-start oj-sm-12 oj-flex-item">
-                        <div class="oj-sm-justify-content-flex-end oj-flex">
-                            <span class="branding-text oj-sm-12 oj-flex-item" data-bind="text: companyBrand"></span>
-                            <span class="branding-text oj-sm-12 oj-flex-item" data-bind="text: companyDesc"></span>
+                    <div class="branding oj-sm-12 oj-flex-item">
+                        <div class="text-center oj-flex">
+                            <span class="branding oj-sm-12 oj-flex-item" data-bind="text: companyBrand"></span>
                         </div>
                     </div>
-                    <div class="login-form oj-sm-12 oj-flex-item">
-                        <div class="oj-sm-justify-content-center oj-flex" data-bind="visible: loginFailureText() !== ''">
-                            <span class="error-message-text text-align-center" data-bind="text: loginFailureText"></span> 
-                        </div>
+                    <div class="login-form oj-margin-lg-top oj-sm-12 oj-flex-item">
                         <input id="userName" type="text" data-bind="ojComponent: {
                                                         component: 'ojInputText',
-                                                        placeholder: 'your.name@yourdomain.com',
+                                                        placeholder: 'User Name',
                                                         value: userName,
                                                         invalidComponentTracker: tracker,
                                                         required: true,
@@ -37,6 +33,9 @@
                                                         translations: {'required': {
                                                             messageDetail: 'Please enter a valid password'}}
                         }" />
+                        <div class="oj-sm-justify-content-center oj-flex" data-bind="visible: loginFailureText() !== ''">
+                            <span class="error-message-text text-align-center" data-bind="text: loginFailureText"></span> 
+                        </div>
                         <div class="oj-margin-top oj-flex">
                             <button data-bind="click: onLogin, text: 'Sign In'"></button>
                         </div>

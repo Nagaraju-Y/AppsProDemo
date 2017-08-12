@@ -8,7 +8,7 @@
 define(['ojs/ojcore', 'knockout', 'jquery', 'appController'],
  function(oj, ko, $, app) {
   
-    function AboutViewModel() {
+    function AboutViewModel(params) {
       var self = this;
 
       // Header Config
@@ -76,6 +76,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController'],
      * each time the view is displayed.  Return an instance of the ViewModel if
      * only one instance of the ViewModel is needed.
      */
-    return new AboutViewModel();
+    return AboutViewModel;
   }
 );
