@@ -19,7 +19,6 @@ define(['knockout', 'appController', 'ojs/ojcore', 'jquery', 'ojs/ojknockout-val
 
             self.tracker = ko.observable();
             self.companyBrand = ko.observable("APPS PRO");
-            self.companyDesc = ko.observable("Demo App");
             self.userName = ko.observable();
             self.password = ko.observable();
             self.loginFailureText = ko.observable();

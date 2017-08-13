@@ -19,6 +19,11 @@ requirejs.config(
                     {
                         'knockout': 'libs/knockout/knockout-3.4.0.debug',
                         'jquery': 'libs/jquery/jquery-3.1.1',
+                        'jquery-calendar': 'libs/jquery/jquery.calendars',
+                        'jquery-calendar-plus': 'libs/jquery/jquery.calendars.plus',
+                        'jquery-calendar-ummalqura': 'libs/jquery/jquery.calendars.ummalqura',
+                        'jquery-calendar-plugin': 'libs/jquery/jquery.plugin',
+                        'jquery-calendar-picker': 'libs/jquery/jquery.calendars.picker',
                         'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
                         'promise': 'libs/es6-promise/es6-promise',
                         'hammerjs': 'libs/hammer/hammer-2.0.8',
