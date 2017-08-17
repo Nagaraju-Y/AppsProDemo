@@ -12,6 +12,20 @@
                             <span class="branding oj-sm-12 oj-flex-item" data-bind="text: companyBrand"></span>
                         </div>
                     </div>
+                    <div class="oj-sm-12 oj-flex-item">
+                        <button id="arabic" data-bind="click: setArabic,
+                                            ojComponent: {
+                                                component: 'ojButton',
+                                                label: 'Arabic',
+                                                chrome: 'full'
+                        }"></button>
+                        <button id="english" data-bind="click: setEnglish,
+                                            ojComponent: {
+                                                component: 'ojButton',
+                                                label: 'English',
+                                                chrome: 'full'
+                        }"></button>
+                    </div>
                     <div class="login-form oj-margin-lg-top oj-sm-12 oj-flex-item">
                         <input id="userName" type="text" data-bind="ojComponent: {
                                                         component: 'ojInputText',
@@ -37,7 +51,12 @@
                             <span class="error-message-text text-align-center" data-bind="text: loginFailureText"></span> 
                         </div>
                         <div class="oj-margin-top oj-flex">
-                            <button data-bind="click: onLogin, text: 'Sign In'"></button>
+                            <button  data-bind="click: onLogin,
+                                                ojComponent: {
+                                                    component: 'ojButton',
+                                                    label: 'Login',
+                                                    chrome: 'full'
+                            }"></button>
                         </div>
                     </div>
                 </div>

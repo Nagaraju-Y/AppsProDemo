@@ -15,39 +15,55 @@ requirejs.config(
     // Path mappings for the logical module names
     // Update the main-release-paths.json for release mode when updating the mappings
     paths:
-            //injector:mainReleasePaths
-                    {
-                        'knockout': 'libs/knockout/knockout-3.4.0.debug',
-                        'jquery': 'libs/jquery/jquery-3.1.1',
-                        'jquery-calendar': 'libs/jquery/jquery.calendars',
-                        'jquery-calendar-plus': 'libs/jquery/jquery.calendars.plus',
-                        'jquery-calendar-ummalqura': 'libs/jquery/jquery.calendars.ummalqura',
-                        'jquery-calendar-plugin': 'libs/jquery/jquery.plugin',
-                        'jquery-calendar-picker': 'libs/jquery/jquery.calendars.picker',
-                        'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
-                        'promise': 'libs/es6-promise/es6-promise',
-                        'hammerjs': 'libs/hammer/hammer-2.0.8',
-                        'ojdnd': 'libs/dnd-polyfill/dnd-polyfill-1.0.0',
-                        'ojs': 'libs/oj/v3.2.0/debug',
-                        'ojL10n': 'libs/oj/v3.2.0/ojL10n',
-                        'ojtranslations': 'libs/oj/v3.2.0/resources',
-                        'text': 'libs/require/text',
-                        'signals': 'libs/js-signals/signals',
-                        'customElements': 'libs/webcomponents/CustomElements',
-                        'proj4': 'libs/proj4js/dist/proj4-src',
-                        'css': 'libs/require-css/css',
-                    }
-            //endinjector
-            ,
-            // Shim configurations for modules that do not expose AMD
-            shim:
-                    {
-                        'jquery':
-                                {
-                                    exports: ['jQuery', '$']
-                                }
-                    }
+    //injector:mainReleasePaths
+    {
+        'knockout': 'libs/knockout/knockout-3.4.0.debug',
+        'jquery': 'libs/jquery/jquery-3.1.1',
+        'jquery-calendar': 'libs/jquery/jquery.calendars',
+        'jquery-calendar-plus': 'libs/jquery/jquery.calendars.plus',
+        'jquery-calendar-ummalqura': 'libs/jquery/jquery.calendars.ummalqura',
+        'jquery-calendar-plugin': 'libs/jquery/jquery.plugin',
+        'jquery-calendar-picker': 'libs/jquery/jquery.calendars.picker',
+        'jqueryui-amd': 'libs/jquery/jqueryui-amd-1.12.0',
+        'promise': 'libs/es6-promise/es6-promise',
+        'hammerjs': 'libs/hammer/hammer-2.0.8',
+        'ojdnd': 'libs/dnd-polyfill/dnd-polyfill-1.0.0',
+        'ojs': 'libs/oj/v3.2.0/debug',
+        'ojL10n': 'libs/oj/v3.2.0/ojL10n',
+        'ojtranslations': 'libs/oj/v3.2.0/resources',
+        'text': 'libs/require/text',
+        'signals': 'libs/js-signals/signals',
+        'customElements': 'libs/webcomponents/CustomElements',
+        'proj4': 'libs/proj4js/dist/proj4-src',
+        'css': 'libs/require-css/css',
+    }
+    //endinjector
+    ,
+    // Shim configurations for modules that do not expose AMD
+    shim:
+    {
+        'jquery':
+        {
+            exports: ['jQuery', '$']
+        },
+        'jquery-calendar': ['jquery'],
+        'jquery-calendar-plus': ['jquery-calendar'],
+        'jquery-calendar-ummalqura': ['jquery-calendar-plus'],
+        'jquery-calendar-plugin': ['jquery-calendar-ummalqura'],
+        'jquery-calendar-picker': ['jquery-calendar-plugin']
+    },
+    // This section configures the i18n plugin. It is merging the Oracle JET built-in translation
+    // resources with a custom translation file.
+    // Any resource file added, must be placed under a directory named "nls". You can use a path mapping or you can define
+    // a path that is relative to the location of this main.js file.
+    config: {
+        ojL10n: {
+            merge: {
+                'ojtranslations/nls/ojtranslations': 'resources/nls/translations'
+            }
         }
+    }
+}
 );
 
 /**

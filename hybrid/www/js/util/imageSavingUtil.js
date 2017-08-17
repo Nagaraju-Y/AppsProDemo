@@ -57,7 +57,7 @@ define([
                 var fileExtension = "." + oldFileURI.split('.').pop();
                 var date = new Date();
                 var fullDate = date.toISOString().substr(0, 10);
-                var newFileName = "IMG_" + fullDate + date.getTime() + fileExtension;
+                var newFileName = "IMG_" + fullDate + "_" + date.getTime() + fileExtension;
                 console.log("newFileName: " + newFileName);
                 self.saveImage(fileEntry, newFileName);
             }, errorForFolderCallback("cache"));
