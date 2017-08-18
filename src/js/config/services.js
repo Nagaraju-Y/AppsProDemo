@@ -17,13 +17,13 @@ define(['config/serviceconfig', 'util/commonhelper'
         var servicesHost = commonHelper.getHost();
         
         self.authenticate = function (payload) {
-            var serviceURL = servicesHost + "login";
-            return serviceConfig.callPostService(serviceURL, payload, serviceConfig.contentTypeApplicationJSON);
+//            var serviceURL = servicesHost + "login";
+//            return serviceConfig.callPostService(serviceURL, payload, serviceConfig.contentTypeApplicationJSON);
         };
         
         self.getExampleDetails = function () {
-            // var serviceURL = servicesHost + apiVersion + "profile";
-            var serviceURL = servicesHost + 'exampleService';
+//            var serviceURL = servicesHost + 'exampleService';
+            var serviceURL = 'js/jsonData/example.json';
             return serviceConfig.callGetService(serviceURL, serviceConfig.contentTypeApplicationJSON);
         };
     };

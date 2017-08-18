@@ -74,6 +74,10 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojarraytabledatasource', 
                 };
                 return headerFactory;
             };
+            
+            self.failCbFn = function(xhr) {
+                console.log(xhr);
+            };
 
             // Method for adjusting the content area top/bottom paddings to avoid overlap with any fixed regions. 
             // This method should be called whenever your fixed region height may change.  The application
