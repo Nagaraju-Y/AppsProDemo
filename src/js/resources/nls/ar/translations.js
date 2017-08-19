@@ -3,7 +3,7 @@ define({
     "login": {
         "userName" : "اسم المستخدم:",
         "password": "كلمه السر:",
-        "loginText" : "تسجيل الدخول",
+        "loginLabel" : "تسجيل الدخول",
         "loginFailureText" : "خطأ في اسم المستخدم أو كلمة مرور."
     }
 });

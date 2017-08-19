@@ -83,15 +83,14 @@ a.calendars-cmd {
     line-height: 35px;
     text-align: center;    
 }
+.calendars-month td .calendars-highlight {
+    background-color: #85bae7 !important;
+    color: #fff;
+}
 
 .calendars-month td .calendars-selected {
     font-weight: bold;
     background: #0572ce !important;
-    color: #fff;
-}
-
-.calendars-month td .calendars-highlight {
-    background-color: #85bae7 !important;
     color: #fff;
 }
 

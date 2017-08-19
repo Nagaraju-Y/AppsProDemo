@@ -24,6 +24,10 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'jquery-calendar', 
                 $("#datePicker").val(tempDate);
                 $("#datePicker").calendarsPicker({calendar: $.calendars.instance('ummalqura')});
             };
+            
+            self.handleAttached = function() {
+                self.getDate();
+            };
         }
 
         return UmmalquraViewModel;

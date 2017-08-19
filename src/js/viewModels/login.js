@@ -20,7 +20,10 @@ define(['knockout', 'appController', 'ojs/ojcore', 'jquery', 'ojs/ojknockout-val
             self.tracker = ko.observable();
             self.companyBrand = ko.observable("APPS PRO");
             self.userName = ko.observable();
+            self.userNameLabel = ko.observable();
             self.password = ko.observable();
+            self.passwordLabel = ko.observable();
+            self.loginLabel = ko.observable();
             self.loginFailureText = ko.observable();
 
             self._showComponentValidationErrors = function (trackerObj) {
@@ -77,8 +80,9 @@ define(['knockout', 'appController', 'ojs/ojcore', 'jquery', 'ojs/ojknockout-val
             };
 
             self.refresh = function () {
-                $("#userNameLabel").html(getTranslation("login.userName"));
-                $("#passwordLabel").html(getTranslation("login.password"));
+                self.userNameLabel(getTranslation("login.userName"));
+                self.passwordLabel(getTranslation("login.password"));
+                self.loginLabel(getTranslation("login.loginLabel"));
                 $("#loginButton").attr("value", getTranslation("login.loginText"));
                 $("#userName").ojInputText("refresh");
                 $("#password").ojInputPassword("refresh");
@@ -110,12 +114,15 @@ define(['knockout', 'appController', 'ojs/ojcore', 'jquery', 'ojs/ojknockout-val
                 }
             };
             
+            function initTranslations() {
+                self.userNameLabel(getTranslation("login.userName"));
+                self.passwordLabel(getTranslation("login.password"));
+                self.loginLabel(getTranslation("login.loginLabel"));
+            }
+            
             self.handleAttached = function() {
                 app.adjustContentPadding();
-            };
-            
-            self.handleBindingsApplied = function() {
-                
+                initTranslations();
             };
         }
         return LoginViewModel;

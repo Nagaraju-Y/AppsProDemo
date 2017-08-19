@@ -4,7 +4,7 @@ define({
         "login": {
             "userName" : "User Name:",
             "password": "Password:",
-            "loginText" : "Login",
+            "loginLabel" : "Login",
             "loginFailureText" : "Invalid User Name or Password."
         }
     },

@@ -29,7 +29,7 @@
                     <div class="login-form oj-margin-lg-top oj-sm-12 oj-flex-item">
                         <input id="userName" type="text" data-bind="ojComponent: {
                                                         component: 'ojInputText',
-                                                        placeholder: 'User Name',
+                                                        placeholder: userNameLabel,
                                                         value: userName,
                                                         invalidComponentTracker: tracker,
                                                         required: true,
@@ -39,7 +39,7 @@
                         }" />
                         <input id="password" type="password" data-bind="ojComponent: {
                                                         component: 'ojInputPassword',
-                                                        placeholder: 'Password',
+                                                        placeholder: passwordLabel,
                                                         value: password,
                                                         invalidComponentTracker: tracker,
                                                         required: true,
@@ -54,7 +54,7 @@
                             <button  data-bind="click: onLogin,
                                                 ojComponent: {
                                                     component: 'ojButton',
-                                                    label: 'Login',
+                                                    label: loginLabel,
                                                     chrome: 'full'
                             }"></button>
                         </div>
