@@ -18,6 +18,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojarraytabledatasource', 
                 'ummalqura': {label: 'Ummalqura'},
                 'camera': {label: 'Camera'},
                 'uploadfile': {label: 'Upload File'},
+                'localnotifications': {label: 'Local Notifications'},
                 'about': {label: 'About'}
             });
             oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
@@ -37,6 +38,8 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojarraytabledatasource', 
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
                 {name: 'Upload File', id: 'uploadfile',
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-person-icon-24'},
+                {name: 'Local Notifications', id: 'localnotifications',
+                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
                 {name: 'About', id: 'about',
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
             ];
@@ -100,6 +103,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojarraytabledatasource', 
                     contentElem.classList.add('oj-complete');
                 }
             };
+            
+            cordova.plugins.notification.local.on("click", function (notification) {
+                console.log(notification);
+                alert(notification.text);
+            });
         }
 
         return new ControllerViewModel();

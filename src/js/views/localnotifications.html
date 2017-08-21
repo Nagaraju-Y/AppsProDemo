@@ -1,0 +1,40 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="oj-hybrid-applayout-page">
+    <div class="oj-applayout-fixed-top">
+        <header role="banner" class="oj-hybrid-applayout-header" data-bind="ojModule: headerConfig">
+        </header>
+    </div>
+    <div class="oj-applayout-content">
+        <div role="main" class="oj-hybrid-applayout-content">
+            <div class="oj-hybrid-padding">
+                <h3>Local Notifications Content Area</h3>
+                <button data-bind="click: scheduleNotification,
+                                    ojComponent: {
+                                        component: 'ojButton',
+                                        chroming: 'full',
+                                        label: 'Schedule a notification'
+                }">
+                </button>
+                <br/>
+                <button data-bind="click: cancelAllNotifications,
+                                    ojComponent: {
+                                        component: 'ojButton',
+                                        chroming: 'full',
+                                        label: 'Cancel all notification'
+                }">
+                </button>
+                <br/>
+                <button data-bind="click: queryNotifications,
+                                    ojComponent: {
+                                        component: 'ojButton',
+                                        chroming: 'full',
+                                        label: 'List all notifications'
+                }">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
