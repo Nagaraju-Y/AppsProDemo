@@ -23,6 +23,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'util/commonhelper'
                 }
             };
 
+        self.getDate = function () {
+            console.log("Inside getDate() function");
+            var calendar = $.calendars.instance();
+            var tempDate = calendar.parseDate('mm/dd/yyyy', '01/26/1432');
+            tempDate = calendar.formatDate('yyyy/dd/mm', tempDate);
+            $("#datePicker").val(tempDate);
+            $("#datePicker").calendarsPicker({calendar: $.calendars.instance('ummalqura')});
+        };
             self.handleAttached = function (info) {
                 commonUtil.requestPermissions();
                 services.getExampleDetails().then(getExampleDetailsSuccessCbFn, app.failCbFn);

@@ -19,9 +19,13 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojarraytabledatasource', 
                 'camera': {label: 'Camera'},
                 'uploadfile': {label: 'Upload File'},
                 'localnotifications': {label: 'Local Notifications'},
+                'orgchart': {label: 'Org Chart'},
                 'about': {label: 'About'}
             });
             oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
+            
+            // Register custom components for reusing the code
+            ko.components.register('apps-hijridatepicker', {require: 'components/apps-hijridatepicker/apps-hijridatepicker'});
             
             function mergeConfig(original) {
                 return $.extend(true, {}, original, {params: {'rootData': {}}});
@@ -40,6 +44,8 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojarraytabledatasource', 
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-person-icon-24'},
                 {name: 'Local Notifications', id: 'localnotifications',
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
+                {name: 'Org Chart', id: 'orgchart',
+                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'},
                 {name: 'About', id: 'about',
                     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
             ];

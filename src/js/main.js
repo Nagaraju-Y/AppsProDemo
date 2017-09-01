@@ -19,6 +19,7 @@ requirejs.config(
     {
         'knockout': 'libs/knockout/knockout-3.4.0.debug',
         'jquery': 'libs/jquery/jquery-3.1.1',
+        'jquery-orgchart': 'libs/jquery/jquery.orgchart',
         'jquery-calendar': 'libs/jquery/jquery.calendars',
         'jquery-calendar-plus': 'libs/jquery/jquery.calendars.plus',
         'jquery-calendar-ummalqura': 'libs/jquery/jquery.calendars.ummalqura',
@@ -46,6 +47,7 @@ requirejs.config(
         {
             exports: ['jQuery', '$']
         },
+        'jquery-orgchart': ['jquery'],
         'jquery-calendar': ['jquery'],
         'jquery-calendar-plus': ['jquery-calendar'],
         'jquery-calendar-ummalqura': ['jquery-calendar-plus'],
